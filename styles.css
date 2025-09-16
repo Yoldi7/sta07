@@ -1,40 +1,79 @@
+/* styles.css */
+
+/* Estilo general */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f5;
+    background-color: #f4f4f4;
     margin: 0;
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
+/* Título principal */
 h1 {
-    color: #333366;
+    color: #2c3e50;
+    margin-bottom: 30px;
 }
 
-div {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
 
+
+/* Inputs y botón */
 input[type="text"] {
     padding: 10px;
-    width: 200px;
+    width: 250px;
+    max-width: 90%;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
+    font-size: 16px;
 }
 
 button {
     padding: 10px 20px;
-    background-color: #333366;
+    background-color: #2980b9;
     color: white;
     border: none;
     border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #555599;
+    background-color: #3498db;
+}
+
+/* Resultado de la película */
+#menu {
+    position: relative;  /* para poder usar z-index */
+    z-index: 10;         /* mayor que el del movie */
+    background-color: #ffffff;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+#movie {
+    position: relative;  /* también relativo para z-index */
+    z-index: 1;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    display: inline-block;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+#movie h2 {
+    margin-top: 0;
+    color: #34495e;
+}
+
+#movie p {
+    margin: 5px 0;
+    color: #555;
 }
